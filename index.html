@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090507">
+  <meta name="description" content="Uma mensagem especial.">
+  <title>Uma mensagem para você</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <span class="glow glow-a"></span><span class="glow glow-b"></span>
+    <span class="glow glow-c"></span><span class="haze"></span>
+    <div class="particles" id="particles"></div>
+  </div>
+
+  <audio id="backgroundMusic" src="assets/musica.mp3" preload="auto" loop></audio>
+
+  <main>
+    <section class="gate screen active" id="gate" aria-labelledby="gateTitle">
+      <div class="gate-card">
+        <div class="eyebrow"><span></span> UMA MENSAGEM ESPECIAL <span></span></div>
+        <div class="small-orbit" aria-hidden="true"><i></i></div>
+        <h1 id="gateTitle">Há algo que<br>gostaria de <em>compartilhar.</em></h1>
+        <p class="gate-copy">Este espaço foi preparado especialmente para você.</p>
+        <form id="nameForm" autocomplete="off">
+          <label class="sr-only" for="nameInput">Seu nome</label>
+          <input id="nameInput" name="name" type="text" placeholder="Digite seu nome" autocomplete="off" spellcheck="false" required>
+          <p class="error" id="errorMessage" role="alert" aria-live="polite"></p>
+          <button class="continue-button" type="submit">Continuar <span aria-hidden="true">→</span></button>
+        </form>
+        <div class="gate-footer">UMA LEITURA, SEM PRESSA</div>
+      </div>
+    </section>
+
+    <section class="letter screen" id="letter" aria-label="Mensagem">
+      <header class="letter-header">
+        <div class="eyebrow"><span></span> UMA MENSAGEM PARA VOCÊ <span></span></div>
+        <div class="header-line"></div>
+      </header>
+      <article class="letter-card">
+        <div class="letter-topline">
+          <span class="letter-number">01</span>
+          <div class="letter-heading">ALGUMAS <strong>PALAVRAS QUE EU PRECISAVA DIZER</strong></div>
+          <button class="music-control" id="musicControl" type="button" aria-label="Pausar música" title="Pausar música" hidden>
+            <svg id="pauseIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8.2-4.8-9.5-10.1C1.4 6.4 3.6 3.5 7 3.5c2.1 0 3.7 1.2 5 3 1.3-1.8 2.9-3 5-3 3.4 0 5.6 2.9 4.5 7.4C20.2 16.2 12 21 12 21Z"/><path d="M9.5 9v6M14.5 9v6"/></svg>
+            <svg id="playIcon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M12 21s-8.2-4.8-9.5-10.1C1.4 6.4 3.6 3.5 7 3.5c2.1 0 3.7 1.2 5 3 1.3-1.8 2.9-3 5-3 3.4 0 5.6 2.9 4.5 7.4C20.2 16.2 12 21 12 21Z"/><path d="m10 9 5 3-5 3z"/></svg>
+          </button>
+        </div>
+        <h2>Letícia,</h2>
+        <div class="letter-body" id="letterBody">
+          <p>Honestamente, eu nem sei como começar isso, mas sei que deixei minha vida mudar de uma forma que eu não esperaria.</p>
+          <p>Com o passar desse tempo, fui me deixando levar pelas imprevisibilidades e por coisas temporárias para satisfazer minhas vontades, mas espero que não me julgue.</p>
+          <p>Constantemente penso no que fiz e no que deixei de fazer durante esses quase 20 anos. O tempo passou rápido e, pensando bem, não fiz nada que realmente melhorasse minha vida.</p>
+          <p>Conheci pessoas, como também tirei outras da minha vida; evitei algumas, como também “amei” — e me machuquei, principalmente quando comecei a viver só, período em que tudo foi mais doloroso por não ter nenhum apoio. Possivelmente, tive mais relacionamentos que você, e foi aí que esteve o problema na minha vida: experiências ruins, perda de tempo, desilusão, enganos, traições e nenhum final feliz. Passei por tudo isso e percebi que também mudou a forma como vejo os relacionamentos.</p>
+          <p>Eu realmente não queria que fosse assim, mas me culpo por ter deixado acontecer. Tive a chance de ser feliz no passado, desperdicei essa oportunidade e tudo acabou indo por água abaixo.</p>
+          <p>Mas uma coisa que nunca deixei de sentir foi sentimento por alguém. A maioria das pessoas com quem me envolvi foi por capricho, desejo e impulso. Eu transmitia confiança, mas tentava manter tudo sob controle para não me apegar. Às vezes, porém, me envolvia com alguém a quem me apegava profundamente. Criávamos momentos incríveis, mas, no final, ficavam somente eu e as lembranças. Aquilo me corroía sem parar, ainda mais quando lugares ou coisas despertavam essas lembranças. Levava tempo para reconstruir minha mente e meus dias.</p>
+          <p>Bom, tudo isso fez com que eu mudasse sentimentalmente. Depois que me separei da mãe da minha filha, me envolvi com a Border e, como disse, quando eu criava sentimentos genuínos por alguém, me tornava cego. Quando esse alguém realmente não merecia meus esforços, já era tarde demais: eu já estava preso àquela pessoa, porque me dedicava, e tudo isso construía dedicação, investimento e uma forma de pensar. Então, depois dela, senti raiva de mim mesmo e mudei um pouco. Na verdade, até hoje sinto isso: me culpo, me decepciono e deixei minha vida toda desajustada. Mas não, tudo isso não aconteceu somente por causa da “Border”. Durante minha vida, também me afastei de algumas pessoas e não fiquei com elas por motivos que não se encaixavam ou geravam conflitos.</p>
+          <p>E, até então, isso continuou acontecendo.</p>
+          <p>Eu quero que você entenda que estou sentimentalmente mudado.</p>
+          <p>Mudei, fiz coisas erradas, me envolvi com quem não merecia, fiz o que não devia, me dediquei a quem não merecia, perdi meu tempo, vivi de ilusões, sofri e chorei desejando sumir.</p>
+          <p>Porque eu também sei criar sentimentos e muito apego. Às vezes, eu me dedicava mais a uma pessoa do que ao meu próprio filho, entende?</p>
+          <p>Talvez, para você, pareça besteira, mas somente eu sei o que vivi para me dedicar a alguém.</p>
+          <p>É como naquela história: “a gente se dedica por quem não presta ou não merece, e deixa escapar quem realmente quer a gente”. E foi isso que aconteceu. Eu me perdi.</p>
+          <p>E parece que não estou conseguindo viver isso com você, mas o medo de perdê-la também me corrói, porque não sei quando nem como encontrarei alguém como você — alguém que acho que nunca tive.</p>
+          <p>Sua delicadeza, sua forma de ajudar, sua dedicação, seus gestos de serviço, sua atenção, seus sentimentos, seu sofrimento passado, seu amor — tudo isso eu sinto. Mas parece que estou deixando de valorizar essas coisas por causa da minha arrogância e do meu capricho.</p>
+          <p>Quando estou sozinho, penso que você merece alguém muito melhor que eu. Eu te magoei muito e, mesmo assim, você continua comigo. Tenho medo de perdê-la, porque dificilmente encontrarei em outro lugar o que encontro em você — a não ser versões de alguém que poderia ser.</p>
+          <p>Eu te devo muitas coisas: desculpas, perdão, cuidado e ainda mais sentimentos.</p>
+          <p>Um sentimento infinito de cuidado e segurança. Sinto que estou falhando, mas não quero deixar meu egoísmo tomar conta dessa consciência. Não quero tentar colocar meus argumentos acima das suas palavras, pois você está acima de qualquer razão que eu tente usar para te convencer.</p>
+          <p>Todos os dias procuro constantemente mudar. Eu falho, mas não consigo desistir.</p>
+          <p>Tudo isso está na minha mente. Penso em tudo: no meu passado, presente e futuro; penso nas coisas, nas pessoas, em tudo — e menos em mim.</p>
+          <p>Às vezes, nem sei o que fazer. Penso em desistir e seguir a vida só, assim como penso em não deixar você partir.</p>
+          <p>Eu amo você e sinto tristeza por não ter feito mais por você; por não ter te dado uma flor quando seu jardim precisava, por não ter oferecido um lenço quando seu choro precisou, por não ter ajudado suas noites sem dormir quando você precisava de descanso. Ando triste, desanimado e sem forças. Minha impaciência constante me faz querer colocar a culpa em você, e é aí que mais estou errando: colocando a culpa em você.</p>
+          <p>Quero que você desconsidere tudo isso como uma forma de eu me desculpar pelas minhas impropriedades e pelos despropósitos das palavras que usei para te magoar. Mesmo que sejamos falhos, reconheço que também tenho muito a corrigir.</p>
+          <p>Essas são algumas palavras que precisei, de repente, te dizer.</p>
+          <p>Não irei mais tentar descobrir. Preciso apenas de força e dedicação para mudar essa realidade atual. Ainda há muita coisa que preciso resolver, assim como também preciso me desfazer de algumas coisas.</p>
+          <p class="signature">Com amor,<br>M.</p>
+        </div>
+        <footer class="letter-footer">
+          <span class="footer-rule"></span>
+          <span>FIM DA MENSAGEM</span>
+          <span class="footer-rule"></span>
+        </footer>
+      </article>
+      <div class="bottom-note">Leia no seu tempo.</div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
